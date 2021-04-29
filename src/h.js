@@ -8,9 +8,8 @@ export default function(sel, data, c) {
   } else if (Array.isArray(c) && c.length) {
     const children = []
     c.forEach(item => {
-      if (!(typeof item === 'object' && item.hasOwnProperty('sel'))) {
+      if (!(typeof item === 'object' && item.hasOwnProperty('sel'))) 
         throw Error('传入数组的元素不是 h 函数')
-      }
       children.push(item)
     })
     return vnode(sel, data, children, undefined, undefined)

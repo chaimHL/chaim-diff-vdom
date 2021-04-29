@@ -1,3 +1,6 @@
 import h from './h.js'
-const vnode = h('a', {}, [h("div", {}, "子元素一"), h("div", {}, "子元素二")])
-console.log(vnode);
+import patch from './patch'
+
+const container = document.getElementById('container')
+const vnode = h('div', {}, '简单爱')
+patch(container, vnode)
