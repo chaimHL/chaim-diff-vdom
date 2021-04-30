@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
-    port: 8080,
+    port: 3000,
     contentBase: './dist' // 静态资源目录
   }
 }

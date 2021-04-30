@@ -12,6 +12,10 @@ export default (oldVnode, newVnode) => {
     // 同一节点
   } else {
     // 不是同一节点
-    creatElement(newVnode, oldVnode.elm)
+    const domNode = creatElement(newVnode)
+    // 将新节点上树
+    oldVnode.elm.parentNode?.insertBefore(domNode, oldVnode.elm)
   }
+  // 删除老节点
+  oldVnode.elm.parentNode?.removeChild(oldVnode.elm)
 }
