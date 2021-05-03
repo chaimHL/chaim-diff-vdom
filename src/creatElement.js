@@ -1,5 +1,5 @@
 /**
- * 将 vnode 创建为真正的 DOM 节点(孤儿节点)
+ * 将 vnode 创建为真正的 DOM 节点(但是没上树的孤儿节点)
  */
 export default function createElement (vnode) {
   const domNode = document.createElement(vnode.sel)
