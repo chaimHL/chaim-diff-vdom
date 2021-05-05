@@ -17,6 +17,7 @@ export default function createElement (vnode) {
   } else {
     // 内部为文本
     domNode.innerText = vnode.text
+		vnode.elm = domNode
   }
   return domNode
 }

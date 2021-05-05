@@ -8,7 +8,7 @@ export default (oldVnode, newVnode) => {
 	// newVnode 的 text 属性有没有值
 	if (newVnode.text !== undefined && (newVnode.children === undefined || newVnode.children.length === 0)) {
 		// 有 text
-		// 新老虚拟节点的 text 的值是否一样
+		// 新旧虚拟节点的 text 的值是否一样
 		if (newVnode.text !== oldVnode.text) {
 			// oldVnode.elm 就是旧虚拟节点的真实 DOM
 			oldVnode.elm.innerText = newVnode.text
